@@ -1,41 +1,33 @@
-
-
-/// compile project(':asd')
-
 allprojects {
-	apply plugin: 'java'
-	apply plugin: 'maven'
-	apply plugin: 'idea'
-	
-	sourceCompatibility = 1.8
-	targetCompatibility = 1.8
-	
-	repositories {
-		jcenter()
-	}
-	
-	sourceSets {
-		main {
-			java {
-				srcDirs = ['src']
-			}
-			resources {
-				srcDirs = ['src', 'src_resources']
-			}
-		}
-		test {
-			java {
-				srcDirs = ['test_src']
-			}
-			resources {
-				srcDirs = ['test_src', 'test_src_resources']
-			}
-		}
-	}
-	
-	test { useTestNG() }
-}
+  apply plugin: 'java'
+  apply plugin: 'maven'
+  apply plugin: 'idea'
 
-subprojects {
-	
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+
+  repositories {
+    jcenter()
+  }
+
+  sourceSets {
+    main {
+      java {
+        srcDirs = ['src']
+      }
+      resources {
+        srcDirs = ['src', 'src_resources']
+      }
+    }
+    test {
+      java {
+        srcDirs = ['test_src']
+      }
+      resources {
+        srcDirs = ['test_src', 'test_src_resources']
+      }
+    }
+  }
+
+  test { useTestNG() }
 }
