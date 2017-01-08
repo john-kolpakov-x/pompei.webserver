@@ -14,7 +14,7 @@ allprojects {
 		jcenter()
 	}
 	
-	sourcesSets {
+	sourceSets {
 		main {
 			java {
 				srcDirs = ['src']
